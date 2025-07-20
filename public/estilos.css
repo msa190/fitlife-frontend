@@ -1,0 +1,148 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #FAFAFA;
+  color: #1F2C4C;
+  line-height: 1.6;
+}
+
+/* Cabeçalho */
+#topo {
+  background-color: #1F2C4C;
+  color: #FAFAFA;
+  padding: 2rem 1rem;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#titulo-app {
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+}
+
+/* Conteúdo principal */
+#conteudo-principal {
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+#info-data-hora h2 {
+  font-size: 1.5rem;
+  color: #F26A1B;
+  margin-bottom: 1rem;
+}
+
+#data-hora {
+  font-size: 1.25rem;
+  color: #333;
+  background-color: #E8E8E8;
+  display: inline-block;
+  padding: 0.75rem 1.25rem;
+  border-radius: 8px;
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Rodapé */
+#rodape {
+  background-color: #1F2C4C;
+  color: #FAFAFA;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+#titulo-agenda {
+  font-size: 2rem;
+}
+
+#calendario {
+  margin-top: 2rem;
+}
+
+#calendario h2 {
+  color: #F26A1B;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+table {
+  margin: 0 auto;
+  border-collapse: collapse;
+  width: 90%;
+  max-width: 600px;
+  background-color: #E8E8E8;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+th, td {
+  border: 1px solid #ccc;
+  text-align: center;
+  padding: 0.75rem;
+  font-size: 1rem;
+}
+
+th {
+  background-color: #1F2C4C;
+  color: #FAFAFA;
+}
+
+.fim-de-semana {
+  background-color: #FDE2D2;
+  color: #F26A1B;
+  font-weight: bold;
+}
+form {
+  width: 90%;
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #E8E8E8;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-campo {
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.form-campo label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.form-campo input,
+.form-campo textarea,
+.form-campo select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+button[type="submit"] {
+  background-color: #F26A1B;
+  color: #fff;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #d55412;
+}
