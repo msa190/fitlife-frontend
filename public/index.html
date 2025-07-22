@@ -4,7 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FitLife</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
+
 <script>
   // Aplica a validação a todos os formulários existentes na página
   document.querySelectorAll('form').forEach(form => {
@@ -41,7 +43,16 @@
     <section id="info-data-hora">
       <h2>Data e Horário Atual</h2>
       <p id="data-hora">Carregando...</p>
-      <p><a href="agenda.html">Agenda</a></p>
+    </section>
+
+    <section id="links-navegacao">
+      <h2>Acesso Rápido</h2>
+      <ul>
+        <li><a href="agenda.html">Agenda</a></li>
+        <li><a href="cad_aluno.html">Cadastro de Aluno</a></li>
+        <li><a href="cad_horario.html">Cadastro de Horário</a></li>
+        <li><a href="cad_agendamento.html">Agendamento</a></li>
+      </ul>
     </section>
   </main>
 
@@ -62,10 +73,11 @@
     atualizarDataHora();
     // Atualiza a cada segundo
     setInterval(atualizarDataHora, 1000);
-    fetch("fitlife-backend-production.up.railway.app")
-  .then(r => r.text())
-  .then(data => alert(data))
 
+    // Teste de backend
+    fetch("https://fitlife-backend-production.up.railway.app")
+      .then(r => r.text())
+      .then(data => console.log(data));
   </script>
 </body>
 </html>
