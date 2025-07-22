@@ -146,3 +146,80 @@ button[type="submit"] {
 button[type="submit"]:hover {
   background-color: #d55412;
 }
+
+/* styles.css */
+
+/* Estilo base para todos os formulários */
+form {
+  max-width: 400px;
+  margin: 1.5rem auto;
+  padding: 1.5rem;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  font-family: Arial, sans-serif;
+}
+
+/* Títulos dentro dos formulários, se usar <h2> */
+form h2 {
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  color: #333;
+  text-align: center;
+}
+
+/* Inputs, selects e textareas padrão */
+form input[type="text"],
+form input[type="email"],
+form input[type="number"],
+form input[type="time"],
+form select,
+form textarea {
+  width: 100%;
+  padding: 0.6rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  box-sizing: border-box;
+}
+
+/* Borda vermelha no erro (mantém coerência com o script JS) */
+form input.error,
+form select.error,
+form textarea.error {
+  border-color: #e74c3c;
+}
+
+/* Botões de submit */
+form button[type="submit"] {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #28a745;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+form button[type="submit"]:hover {
+  background-color: #218838;
+}
+
+/* Placeholder com cor suave */
+form ::placeholder {
+  color: #aaa;
+}
+
+/* Pequeno ajuste para selects */
+form select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2210%22%20height%3D%227%22%20viewBox%3D%220%200%2010%207%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cpath%20d%3D%22M0%200l5%207%205-7z%22%20fill%3D%22%23666%22/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 10px 7px;
+}

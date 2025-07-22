@@ -5,6 +5,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FitLife</title>
 </head>
+<script>
+  // Aplica a validação a todos os formulários existentes na página
+  document.querySelectorAll('form').forEach(form => {
+    form.addEventListener('submit', function (e) {
+      const inputs = this.querySelectorAll('input, select, textarea');
+      let valid = true;
+      let firstInvalid = null;
+
+      inputs.forEach(input => {
+        if (!input.value.trim()) {
+          valid = false;
+          input.style.border = '2px solid red';
+          if (!firstInvalid) firstInvalid = input;
+        } else {
+          input.style.border = '1px solid #ccc'; // limpa se estiver válido
+        }
+      });
+
+      if (!valid) {
+        e.preventDefault();
+        alert('Por favor, preencha todos os campos obrigatórios.');
+        if (firstInvalid) firstInvalid.focus();
+      }
+    });
+  });
+</script>
+
 <body>
   <header id="topo">
     <h1 id="titulo-app">FitLife</h1>
@@ -35,6 +62,10 @@
     atualizarDataHora();
     // Atualiza a cada segundo
     setInterval(atualizarDataHora, 1000);
+    fetch("fitlife-backend-production.up.railway.app")
+  .then(r => r.text())
+  .then(data => alert(data))
+
   </script>
 </body>
 </html>
